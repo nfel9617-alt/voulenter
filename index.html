@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة أثر الوطنية | Athar Enterprise UI</title>
+    <title>منصة أثر الوطنية | Athar Enterprise Portal</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons Vector Library -->
@@ -26,20 +26,16 @@
 </head>
 <body class="flex h-screen overflow-hidden antialiased selection:bg-emerald-100 selection:text-emerald-900">
 
-    <!-- Sidebar / القائمة الجانبية الموحدة -->
+    <!-- Sidebar / القائمة الجانبية -->
     <aside class="w-72 bg-white border-l border-slate-200/80 flex flex-col justify-between p-5 z-20 shadow-sm shrink-0">
         <div class="space-y-8">
             
-         <!-- 🔴 مكان اللوجو / Brand Logo Header -->
-<div class="flex items-center gap-3 px-2 cursor-pointer" onclick="switchTab('home')">
-    <div class="relative w-12 h-12 rounded-xl border border-slate-200 shadow-sm overflow-hidden bg-white flex items-center justify-center shrink-0">
-        <img id="platform-logo" src="https://raw.githubusercontent.com/nfel9617-alt/voulenter/main/vou.png" class="w-full h-full object-contain p-1" alt="Logo">
-    </div>
-    <div>
-        <h1 class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">أثَــر</h1>
-        <span class="text-[10px] tracking-widest font-bold text-slate-400 uppercase mt-1 block">National CSR & Volunteer Portal</span>
-    </div>
-</div>
+            <!-- 🔴 الشعار / Brand Logo Header -->
+            <div class="flex items-center gap-3 px-2 cursor-pointer" onclick="switchTab('home')">
+                <div class="relative w-12 h-12 rounded-xl border border-slate-200 shadow-sm overflow-hidden bg-white flex items-center justify-center shrink-0">
+                    <img id="platform-logo" src="https://raw.githubusercontent.com/nfel9617-alt/voulenter/main/vou.png" class="w-full h-full object-contain p-1" alt="Logo">
+                </div>
+                <div>
                     <h1 class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">أثَــر</h1>
                     <span class="text-[10px] tracking-widest font-bold text-slate-400 uppercase mt-1 block">National CSR & Volunteer Portal</span>
                 </div>
@@ -70,7 +66,7 @@
                 </button>
                 <button onclick="switchTab('messages')" id="nav-messages" class="nav-btn w-full flex items-center gap-3 px-4 py-3 text-slate-600 rounded-xl text-sm font-semibold hover:bg-slate-50 transition">
                     <i data-lucide="message-square-text" class="w-5 h-5"></i>
-                    <span>المركز التفاعلي / الرسائل</span>
+                    <span>المركز التفاعلي الحي</span>
                 </button>
                 <button onclick="switchTab('create-activity')" id="nav-create-activity" class="nav-btn w-full flex items-center gap-3 px-4 py-3 text-slate-600 rounded-xl text-sm font-semibold hover:bg-slate-50 transition">
                     <i data-lucide="plus-circle" class="w-5 h-5"></i>
@@ -93,7 +89,7 @@
         </div>
     </aside>
 
-    <!-- Main Dynamic Content Container -->
+    <!-- Dynamic Content Area -->
     <main class="flex-1 overflow-y-auto bg-slate-50/50 p-8">
         
         <!-- ================= 1. HOME VIEW ================= -->
@@ -110,7 +106,7 @@
                     </p>
                     <div class="flex items-center gap-4 pt-2">
                         <button onclick="switchTab('profile')" class="bg-primary text-white font-bold px-6 py-3.5 rounded-xl hover-primary transition shadow-lg shadow-emerald-950/15 text-sm flex items-center gap-2">
-                            <i data-lucide="user-plus" class="w-4 h-4"></i> انضم كمتطوع أو منظمة
+                            <i data-lucide="user-plus" class="w-4 h-4"></i> انضم أو سجل دخولك
                         </button>
                         <button onclick="switchTab('initiatives')" class="bg-slate-100 text-slate-700 font-bold px-6 py-3.5 rounded-xl hover:bg-slate-200 transition text-sm flex items-center gap-2">
                             <i data-lucide="search" class="w-4 h-4"></i> استكشف الأنشطة
@@ -120,7 +116,7 @@
                 
                 <div class="lg:col-span-5 relative">
                     <div class="w-full h-72 rounded-2xl overflow-hidden border border-slate-200 shadow-md relative group">
-                        <img id="home-hero-image" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Home Banner Image">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Home Banner Image">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
                             <p class="text-white text-xs font-medium flex items-center gap-2">
                                 <i data-lucide="image" class="w-4 h-4"></i> توثيق الأنشطة والمبادرات الميدانية
@@ -170,7 +166,7 @@
                     <h2 class="text-2xl font-black text-slate-900">دليل الأنشطة والمبادرات</h2>
                     <p class="text-xs text-slate-500 mt-1">تصفح الأنشطة المتاحة للمشاركة أو قم بنشر نشاط إذا كنت منظماً معتمداً</p>
                 </div>
-                <div id="add-act-btn-container">
+                <div>
                     <button onclick="switchTab('create-activity')" class="bg-primary text-white font-bold px-4 py-2.5 rounded-xl hover-primary text-xs flex items-center gap-2 shadow-sm">
                         <i data-lucide="plus" class="w-4 h-4"></i> إنشاء نشاط جديد
                     </button>
@@ -212,49 +208,42 @@
             </div>
         </section>
 
-        <!-- ================= 4. IN-APP MESSAGING / CHAT VIEW ================= -->
+        <!-- ================= 4. LIVE INTERACTIVE MESSAGING VIEW ================= -->
         <section id="view-messages" class="view-section hidden max-w-7xl mx-auto h-[calc(100vh-8rem)]">
             <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm h-full flex overflow-hidden">
+                <!-- Contacts List -->
                 <div class="w-80 border-l border-slate-200/80 flex flex-col bg-slate-50/50">
-                    <div class="p-4 border-b border-slate-200/80">
-                        <h3 class="font-bold text-slate-900 text-sm">محادثات المؤطرين والمستثمرين</h3>
+                    <div class="p-4 border-b border-slate-200/80 flex justify-between items-center">
+                        <h3 class="font-bold text-slate-900 text-sm">المركز التفاعلي الحي</h3>
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
                     </div>
-                    <div class="flex-1 overflow-y-auto space-y-1 p-2">
-                        <div onclick="selectChatContact('أحمد زروقي (مؤطر ولائي - قسنطينة)')" class="p-3 bg-white border border-slate-200/60 rounded-xl cursor-pointer hover:border-primary transition flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-primary flex items-center justify-center font-bold text-xs shrink-0">أز</div>
-                            <div class="overflow-hidden">
-                                <p class="text-xs font-bold text-slate-800 truncate">أحمد زروقي</p>
-                                <p class="text-[10px] text-slate-500 truncate">مؤطر ولائي - قسنطينة</p>
-                            </div>
-                        </div>
-                        <div onclick="selectChatContact('مؤسسة سوناطراك - قسم CSR')" class="p-3 bg-white border border-slate-200/60 rounded-xl cursor-pointer hover:border-primary transition flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">CSR</div>
-                            <div class="overflow-hidden">
-                                <p class="text-xs font-bold text-slate-800 truncate">مؤسسة سوناطراك</p>
-                                <p class="text-[10px] text-slate-500 truncate">قسم الاستثمار الاجتماعي</p>
-                            </div>
-                        </div>
+                    <div class="flex-1 overflow-y-auto space-y-1 p-2" id="chat-contacts-list">
+                        <!-- Dynamic Contact Cards -->
                     </div>
                 </div>
 
+                <!-- Chat Box -->
                 <div class="flex-1 flex flex-col justify-between bg-white">
-                    <div class="p-4 border-b border-slate-200/80 flex items-center justify-between">
+                    <div class="p-4 border-b border-slate-200/80 flex items-center justify-between bg-slate-50/30">
                         <div>
-                            <h4 id="active-chat-title" class="font-bold text-slate-900 text-sm">اختر جهة للتواصل</h4>
-                            <span class="text-[10px] text-emerald-600 font-bold">متصل الآن في منصة أثر</span>
+                            <h4 id="active-chat-title" class="font-bold text-slate-900 text-sm">اختر جهة للبدء في المحادثة الحية</h4>
+                            <span id="active-chat-status" class="text-[10px] text-emerald-600 font-bold">متصل الآن في منصة أثر</span>
                         </div>
-                        <i data-lucide="shield" class="w-5 h-5 text-slate-400"></i>
-                    </div>
-
-                    <div id="chat-messages-container" class="flex-1 p-6 overflow-y-auto space-y-4">
-                        <div class="text-center">
-                            <span class="text-[10px] bg-slate-100 text-slate-500 px-3 py-1 rounded-full">بداية المحادثة الآمنة والموثقة</span>
+                        <div class="flex items-center gap-2 text-xs font-bold text-slate-500">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                            <span>محادثة موثقة</span>
                         </div>
                     </div>
 
-                    <div class="p-4 border-t border-slate-200/80 flex items-center gap-3">
-                        <input type="text" id="chat-input-text" placeholder="اكتب رسالتك هنا..." class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-primary">
-                        <button onclick="sendChatMessage()" class="bg-primary text-white p-3 rounded-xl hover-primary transition">
+                    <div id="chat-messages-container" class="flex-1 p-6 overflow-y-auto space-y-4 bg-slate-50/20">
+                        <div class="text-center my-10">
+                            <p class="text-xs text-slate-400">حدد جهة تواصل من القائمة الجانبية لبدء المراسلة الفورية.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 border-t border-slate-200/80 flex items-center gap-3 bg-white">
+                        <input type="text" id="chat-input-text" onkeypress="if(event.key === 'Enter') sendChatMessage()" placeholder="اكتب رسالتك الحية هنا..." class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-primary">
+                        <button onclick="sendChatMessage()" class="bg-primary text-white p-3 rounded-xl hover-primary transition shadow-md">
                             <i data-lucide="send" class="w-4 h-4"></i>
                         </button>
                     </div>
@@ -300,19 +289,54 @@
                         <textarea id="act-description" rows="4" required placeholder="اكتب شرحاً مختصراً للنشاط والتأطير المطلوب..." class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-primary"></textarea>
                     </div>
 
-                    <button type="submit" id="btn-submit-activity" class="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover-primary transition text-xs shadow-md flex items-center justify-center gap-2">
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover-primary transition text-xs shadow-md flex items-center justify-center gap-2">
                         <i data-lucide="check-circle-2" class="w-4 h-4"></i> نشر النشاط فوراً في الواجهة
                     </button>
                 </form>
             </div>
         </section>
 
-        <!-- ================= 6. PROFILE / REGISTER VIEW ================= -->
+        <!-- ================= 6. PROFILE / REGISTER & LOGIN VIEW ================= -->
         <section id="view-profile" class="view-section hidden max-w-3xl mx-auto space-y-6">
-            <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
+            
+            <!-- Dynamic Auth Selector (Login vs Register) -->
+            <div class="flex items-center justify-center bg-slate-200/70 p-1.5 rounded-2xl max-w-md mx-auto text-xs font-bold">
+                <button type="button" id="tab-btn-login" onclick="toggleAuthMode('login')" class="flex-1 py-2.5 rounded-xl transition bg-white shadow-sm text-primary">
+                    تسجيل الدخول المباشر
+                </button>
+                <button type="button" id="tab-btn-register" onclick="toggleAuthMode('register')" class="flex-1 py-2.5 rounded-xl transition text-slate-600">
+                    إنشاء حساب جديد
+                </button>
+            </div>
+
+            <!-- LOGIN FORM CONTAINER -->
+            <div id="auth-login-container" class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
                 <div>
-                    <h2 class="text-xl font-bold text-slate-900">التسجيل وإدارة الحساب الشخصي</h2>
-                    <p class="text-xs text-slate-500 mt-1">قم بتعبئة بياناتك واختيار صفك ليتم إدراجك رسمياً في المنصة</p>
+                    <h2 class="text-xl font-bold text-slate-900">تسجيل الدخول إلى حسابك</h2>
+                    <p class="text-xs text-slate-500 mt-1">أدخل بريدك الإلكتروني وكلمة المرور للوصول المباشر إلى صلاحياتك</p>
+                </div>
+
+                <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">البريد الإلكتروني</label>
+                        <input type="email" id="login-email" required placeholder="example@domain.dz" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-primary">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">كلمة المرور</label>
+                        <input type="password" id="login-password" required placeholder="••••••••" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-primary">
+                    </div>
+
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover-primary transition text-xs shadow-md flex items-center justify-center gap-2">
+                        <i data-lucide="log-in" class="w-4 h-4"></i> دخول إلى الحساب
+                    </button>
+                </form>
+            </div>
+
+            <!-- REGISTER FORM CONTAINER -->
+            <div id="auth-register-container" class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-6 hidden">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-900">إنشاء حساب جديد بالمنصة</h2>
+                    <p class="text-xs text-slate-500 mt-1">قم بتعبئة بياناتك واختيار صفة الحساب وإرفاق الوثائق المطلوبة</p>
                 </div>
 
                 <form id="registerForm" onsubmit="handleRegister(event)" class="space-y-5">
@@ -352,12 +376,22 @@
 
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">الصفة والتصنيف (حدد طبيعة حسابك)</label>
-                        <select id="reg-role" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-primary">
+                        <select id="reg-role" onchange="checkRoleDocRequirement(this.value)" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-primary font-bold">
                             <option value="متطوع">متطوع شخصي (مشاركة فقط)</option>
                             <option value="تنظيم ولائي">تنظيم / جمعية ولائية (نشر وإدارة أنشطة)</option>
                             <option value="تنظيم وطني">تنظيم / جمعية وطنية (نشر وإدارة أنشطة)</option>
                             <option value="مستثمر">مستثمر / شريك اقتصادي (CSR)</option>
                         </select>
+                    </div>
+
+                    <!-- 🔴 حقل إرفاق وثيقة إثبات الاعتماد للجمعيات والتنظيمات -->
+                    <div id="org-doc-container" class="hidden space-y-2 p-4 bg-amber-50/60 border border-amber-200 rounded-2xl">
+                        <div class="flex items-center gap-2 text-amber-800 text-xs font-bold">
+                            <i data-lucide="file-badge" class="w-4 h-4"></i>
+                            <span>إرفاق وثيقة إثبات اعتماد الجمعية / التنظيم</span>
+                        </div>
+                        <p class="text-[11px] text-amber-700">يرجى رفع ملف الاعتماد الرسمي (PDF أو صورة) لتأكيد صلاحية حساب التنظيم:</p>
+                        <input type="file" id="reg-org-doc" accept=".pdf,image/*" class="w-full text-xs text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-amber-100 file:text-amber-900 hover:file:bg-amber-200">
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
@@ -371,7 +405,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" id="btn-submit-register" class="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover-primary transition text-xs shadow-md">
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3.5 rounded-xl hover-primary transition text-xs shadow-md">
                         حفظ البيانات وتأكيد الحساب
                     </button>
                 </form>
@@ -380,18 +414,67 @@
 
     </main>
 
+    <!-- ================= MODAL: DETAILED PARTICIPATION FORM ================= -->
+    <div id="participationModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 space-y-5 border border-slate-200 shadow-2xl relative animate-fade-in">
+            <button onclick="closeParticipationModal()" class="absolute left-4 top-4 text-slate-400 hover:text-slate-700 p-1">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div>
+                <h3 id="modal-act-title" class="text-lg font-extrabold text-slate-900">تسجيل المشاركة في المبادرة</h3>
+                <p id="modal-act-subtitle" class="text-xs text-slate-500 mt-1">يرجى تأكيد بياناتك وإرفاق شرح توضيحي لدافع مشاركتك</p>
+            </div>
+
+            <form onsubmit="handleParticipationSubmit(event)" class="space-y-4">
+                <input type="hidden" id="modal-hidden-act-title">
+                <input type="hidden" id="modal-hidden-act-wilaya">
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">الاسم واللقب</label>
+                        <input type="text" id="part-fullname" required class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">رقم الهاتف / البريد</label>
+                        <input type="text" id="part-contact" required class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">ولاية الإقامة</label>
+                    <input type="text" id="part-wilaya" required class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">شرح توضيحي: لماذا تود المشاركة في هذا التنظيم / النشاط؟</label>
+                    <textarea id="part-motivation" rows="4" required placeholder="اكتب دوافعك والخبرات التي يمكنك تقديمها لإنجاح المبادرة..." class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-primary"></textarea>
+                </div>
+
+                <div class="flex items-center justify-end gap-3 pt-2">
+                    <button type="button" onclick="closeParticipationModal()" class="px-5 py-2.5 bg-slate-100 text-slate-700 font-bold text-xs rounded-xl hover:bg-slate-200">إلغاء</button>
+                    <button type="submit" class="px-6 py-2.5 bg-primary text-white font-bold text-xs rounded-xl hover-primary transition shadow-md">إرسال طلب المشاركة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- JavaScript Application Core Logic -->
     <script>
-        // رابط قاعدة البيانات الخاص بك المربوط بـ Apps Script
+        // رابط قاعدة البيانات المباشر الخاص بك في Google Apps Script
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwWsmBoKeaZ2-hPQqZkWWjxoMwBLnNQKtyr-1QFLjFZ_VUWwjQiG2CyY15Zgya5SgSO/exec";
 
-        // حالة المستخدم الحالية (افتراضياً: زائر/متطوع)
+        // حالة المستخدم النشط
         let currentUser = {
             name: "زائر المنصة",
-            role: "متطوع"
+            email: "",
+            role: "متطوع",
+            avatar: "https://script.google.com/macros/s/AKfycbyObqo9kBxWkgGJmRdkjMdbG6IcDbFnJeJoworNArW4Y2yw4qZYo0IlAY_zBd_D9ei3/exec"
         };
 
-        // الأنشطة المبتدئة
+        // قاعدة بيانات الحسابات المحلية المحفوظة
+        let registeredAccounts = JSON.parse(localStorage.getItem('athar_users')) || [];
+
+        // قائمة الأنشطة
         let initialActivities = [
             {
                 title: "حملة تنظيف وتزيين المدينة القديمة",
@@ -411,16 +494,32 @@
             }
         ];
 
-        let activeChatContact = "";
+        // سجل المحادثات الحية التفاعلية
+        let chatContacts = [
+            { id: "أحمد زروقي (مؤطر ولائي - قسنطينة)", name: "أحمد زروقي", role: "مؤطر ولائي - قسنطينة", avatar: "أز", color: "bg-emerald-100 text-primary" },
+            { id: "الجمعية الوطنية للتنمية البيئية", name: "الجمعية الوطنية للتنمية البيئية", role: "تنظيم وطني", avatar: "بيئة", color: "bg-emerald-800 text-white" },
+            { id: "مؤسسة سوناطراك - قسم CSR", name: "مؤسسة سوناطراك", role: "قسم الاستثمار الاجتماعي", avatar: "CSR", color: "bg-blue-100 text-blue-700" }
+        ];
+
+        let liveChatData = {
+            "أحمد زروقي (مؤطر ولائي - قسنطينة)": [
+                { sender: "أحمد زروقي", text: "مرحباً بك في منصة أثر. كيف يمكننا مساعدتك في الأنشطة الولائية بقسنطينة؟", time: "09:30 AM" }
+            ],
+            "مؤسسة سوناطراك - قسم CSR": [
+                { sender: "مؤسسة سوناطراك", text: "أهلاً بك! نحن نرحب بمشاريع الرعاية للمبادرات التطوعية ذات الأثر البيئي والشبابي.", time: "11:00 AM" }
+            ]
+        };
+
+        let activeChatContactId = "";
 
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
             renderActivities();
+            renderChatContacts();
         });
 
-        // Tab Navigation Router مع تحقق من الصلاحيات
+        // Tab Navigation Router مع تحقق الصلاحيات
         function switchTab(tabId) {
-            // شرط منع المتطوع من دخول شاشة إنشاء نشاط
             if (tabId === 'create-activity' && currentUser.role === 'متطوع') {
                 alert("تنبيه: خاصية إنشاء الأنشطة مخصصة للتنظيمات والجمعيات المعتمدة فقط.\nبصفتك متطوعاً، يمكنك التصفح والمشاركة في الأنشطة المتاحة.");
                 return;
@@ -436,7 +535,121 @@
             lucide.createIcons();
         }
 
-        // Render Activities Grid Dynamically
+        // Switch Auth Mode (Login / Register)
+        function toggleAuthMode(mode) {
+            const loginBox = document.getElementById('auth-login-container');
+            const regBox = document.getElementById('auth-register-container');
+            const btnLogin = document.getElementById('tab-btn-login');
+            const btnReg = document.getElementById('tab-btn-register');
+
+            if (mode === 'login') {
+                loginBox.classList.remove('hidden');
+                regBox.classList.add('hidden');
+                btnLogin.className = "flex-1 py-2.5 rounded-xl transition bg-white shadow-sm text-primary";
+                btnReg.className = "flex-1 py-2.5 rounded-xl transition text-slate-600";
+            } else {
+                regBox.classList.remove('hidden');
+                loginBox.classList.add('hidden');
+                btnReg.className = "flex-1 py-2.5 rounded-xl transition bg-white shadow-sm text-primary";
+                btnLogin.className = "flex-1 py-2.5 rounded-xl transition text-slate-600";
+            }
+        }
+
+        // Show/Hide Association Document Field
+        function checkRoleDocRequirement(roleVal) {
+            const docBox = document.getElementById('org-doc-container');
+            if (roleVal === 'تنظيم ولائي' || roleVal === 'تنظيم وطني') {
+                docBox.classList.remove('hidden');
+            } else {
+                docBox.classList.add('hidden');
+            }
+        }
+
+        // Direct Login
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+
+            const foundUser = registeredAccounts.find(acc => acc.email === email && acc.password === password);
+
+            if (foundUser) {
+                currentUser = { ...foundUser };
+                updateUserProfileUI();
+                alert(`أهلاً بعودتك، ${currentUser.name}! تم تسجيل دخولك بنجاح بصفة (${currentUser.role}).`);
+                switchTab('home');
+            } else {
+                alert("بيانات الدخول غير مسجلة محلياً. جاري اعتماد حسابك مؤقتاً كمتطوع أو يمكنك إنشاء حساب جديد.");
+                currentUser.name = email.split('@')[0];
+                currentUser.email = email;
+                currentUser.role = "متطوع";
+                updateUserProfileUI();
+                switchTab('home');
+            }
+        }
+
+        // Register Account
+        function handleRegister(e) {
+            e.preventDefault();
+            const firstName = document.getElementById('reg-firstName').value;
+            const lastName = document.getElementById('reg-lastName').value;
+            const role = document.getElementById('reg-role').value;
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+            const docInput = document.getElementById('reg-org-doc');
+
+            let hasDocAttached = false;
+            if ((role === 'تنظيم ولائي' || role === 'تنظيم وطني') && docInput.files.length > 0) {
+                hasDocAttached = true;
+            }
+
+            const newUser = {
+                name: firstName + " " + lastName,
+                email: email,
+                password: password,
+                role: role,
+                avatar: document.getElementById('form-avatar-preview').src,
+                hasDoc: hasDocAttached
+            };
+
+            // Save user locally
+            registeredAccounts.push(newUser);
+            localStorage.setItem('athar_users', JSON.stringify(registeredAccounts));
+
+            currentUser = newUser;
+            updateUserProfileUI();
+
+            // Push to Apps Script
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    action: "register",
+                    firstName: firstName,
+                    lastName: lastName,
+                    age: document.getElementById('reg-age').value,
+                    wilaya: document.getElementById('reg-wilaya').value,
+                    commune: document.getElementById('reg-commune').value,
+                    role: role,
+                    email: email,
+                    hasOfficialDoc: hasDocAttached
+                })
+            });
+
+            alert(`تم إنشاء وتأكيد الحساب بنجاح كـ (${role})!`);
+            switchTab('home');
+        }
+
+        function updateUserProfileUI() {
+            document.getElementById('user-display-name').innerText = currentUser.name;
+            document.getElementById('user-display-role').innerText = currentUser.role;
+            if (currentUser.avatar) {
+                document.getElementById('user-avatar-preview').src = currentUser.avatar;
+            }
+        }
+
+        // Render Activities
         function renderActivities() {
             const container = document.getElementById('initiatives-grid');
             container.innerHTML = "";
@@ -464,7 +677,7 @@
                                 <i data-lucide="message-square" class="w-3.5 h-3.5"></i> تواصل
                             </button>
                         </div>
-                        <button onclick="participateActivity('${item.title}', '${item.wilaya}')" class="w-full bg-primary text-white font-bold py-2.5 rounded-xl hover-primary transition text-xs flex items-center justify-center gap-2">
+                        <button onclick="openParticipationModal('${item.title}', '${item.wilaya}')" class="w-full bg-primary text-white font-bold py-2.5 rounded-xl hover-primary transition text-xs flex items-center justify-center gap-2 shadow-sm">
                             <i data-lucide="user-check" class="w-4 h-4"></i> تسجيل مشاركتك
                         </button>
                     </div>
@@ -474,19 +687,169 @@
             lucide.createIcons();
         }
 
+        // Detailed Participation Modal Logic
+        function openParticipationModal(title, wilaya) {
+            document.getElementById('modal-act-title').innerText = title;
+            document.getElementById('modal-hidden-act-title').value = title;
+            document.getElementById('modal-hidden-act-wilaya').value = wilaya;
+
+            // Pre-fill user data
+            if (currentUser.name !== "زائر المنصة") {
+                document.getElementById('part-fullname').value = currentUser.name;
+                document.getElementById('part-contact').value = currentUser.email || "";
+            }
+
+            document.getElementById('participationModal').classList.remove('hidden');
+        }
+
+        function closeParticipationModal() {
+            document.getElementById('participationModal').classList.add('hidden');
+        }
+
+        function handleParticipationSubmit(e) {
+            e.preventDefault();
+            const actTitle = document.getElementById('modal-hidden-act-title').value;
+            const wilaya = document.getElementById('modal-hidden-act-wilaya').value;
+            const fullName = document.getElementById('part-fullname').value;
+            const contact = document.getElementById('part-contact').value;
+            const userWilaya = document.getElementById('part-wilaya').value;
+            const motivation = document.getElementById('part-motivation').value;
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    action: "participate_detailed",
+                    initiativeTitle: actTitle,
+                    wilaya: wilaya,
+                    fullName: fullName,
+                    contact: contact,
+                    userWilaya: userWilaya,
+                    motivation: motivation
+                })
+            });
+
+            closeParticipationModal();
+            alert(`تم تسجيل طلب مشاركتك وشرحك التوضيحي بنجاح في مبادرة "${actTitle}"!`);
+        }
+
+        // Live Chat Functions
+        function renderChatContacts() {
+            const container = document.getElementById('chat-contacts-list');
+            container.innerHTML = "";
+
+            chatContacts.forEach(c => {
+                const item = document.createElement('div');
+                item.onclick = () => selectChatContact(c.id);
+                item.className = "p-3 bg-white border border-slate-200/60 rounded-xl cursor-pointer hover:border-primary transition flex items-center gap-3";
+                item.innerHTML = `
+                    <div class="w-10 h-10 rounded-full ${c.color} flex items-center justify-center font-bold text-xs shrink-0">${c.avatar}</div>
+                    <div class="overflow-hidden">
+                        <p class="text-xs font-bold text-slate-800 truncate">${c.name}</p>
+                        <p class="text-[10px] text-slate-500 truncate">${c.role}</p>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function startChat(contactId) {
+            switchTab('messages');
+            if (!liveChatData[contactId]) {
+                liveChatData[contactId] = [];
+            }
+            selectChatContact(contactId);
+        }
+
+        function selectChatContact(contactId) {
+            activeChatContactId = contactId;
+            document.getElementById('active-chat-title').innerText = contactId;
+
+            if (!liveChatData[contactId]) {
+                liveChatData[contactId] = [];
+            }
+
+            renderMessagesContainer();
+        }
+
+        function renderMessagesContainer() {
+            const container = document.getElementById('chat-messages-container');
+            container.innerHTML = "";
+
+            const msgs = liveChatData[activeChatContactId] || [];
+
+            if (msgs.length === 0) {
+                container.innerHTML = `<div class="text-center my-6"><span class="text-[10px] bg-slate-100 text-slate-500 px-3 py-1 rounded-full">بداية المحادثة المباشرة الموثقة مع ${activeChatContactId}</span></div>`;
+                return;
+            }
+
+            msgs.forEach(m => {
+                const isMe = m.sender === currentUser.name;
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `flex ${isMe ? 'justify-start' : 'justify-end'}`;
+                msgDiv.innerHTML = `
+                    <div class="${isMe ? 'bg-primary text-white rounded-tr-none' : 'bg-white text-slate-800 border border-slate-200 rounded-tl-none'} p-3 rounded-2xl text-xs max-w-md shadow-sm">
+                        <p class="font-bold text-[10px] mb-1 opacity-80">${m.sender}</p>
+                        <p>${m.text}</p>
+                        <span class="text-[9px] ${isMe ? 'text-emerald-200' : 'text-slate-400'} mt-1 block text-left font-mono">${m.time}</span>
+                    </div>
+                `;
+                container.appendChild(msgDiv);
+            });
+
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function sendChatMessage() {
+            if (!activeChatContactId) {
+                alert("يرجى اختيار جهة تواصل أولاً من القائمة الجانبية.");
+                return;
+            }
+
+            const input = document.getElementById('chat-input-text');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            const timeNow = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            const newMsg = {
+                sender: currentUser.name,
+                text: msg,
+                time: timeNow
+            };
+
+            liveChatData[activeChatContactId].push(newMsg);
+            renderMessagesContainer();
+
+            // Apps Script Dispatch
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    action: "send_message",
+                    sender: currentUser.name,
+                    recipient: activeChatContactId,
+                    message: msg
+                })
+            });
+
+            input.value = "";
+        }
+
         function previewFileAvatar(event) {
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('form-avatar-preview').src = e.target.result;
-                    document.getElementById('user-avatar-preview').src = e.target.result;
                 }
                 reader.readAsDataURL(file);
             }
         }
 
-        // إنشاء نشاط جديد من طرف المنظمين
+        // Handle Activity Creation
         function handleCreateActivity(e) {
             e.preventDefault();
             const title = document.getElementById('act-title').value;
@@ -501,11 +864,9 @@
                 description, image
             };
 
-            // إضافة النشاط في الواجهة المحلية
             initialActivities.unshift(newActivity);
             renderActivities();
 
-            // إرسال البيانات لقاعدة البيانات في Google Sheets
             fetch(GOOGLE_SCRIPT_URL, {
                 method: "POST",
                 mode: "no-cors",
@@ -524,108 +885,6 @@
             switchTab('initiatives');
             alert("تم نشر النشاط بنجاح وظهر الآن مباشرة في الواجهة العامة للأنشطة!");
             document.getElementById('createActivityForm').reset();
-        }
-
-        // تسجيل حساب وتحديث الصفة للصلاحيات
-        function handleRegister(e) {
-            e.preventDefault();
-            const firstName = document.getElementById('reg-firstName').value;
-            const lastName = document.getElementById('reg-lastName').value;
-            const role = document.getElementById('reg-role').value;
-
-            currentUser.name = firstName + " " + lastName;
-            currentUser.role = role;
-
-            document.getElementById('user-display-name').innerText = currentUser.name;
-            document.getElementById('user-display-role').innerText = currentUser.role;
-
-            // إرسال بيانات التسجيل لقاعدة البيانات
-            fetch(GOOGLE_SCRIPT_URL, {
-                method: "POST",
-                mode: "no-cors",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    action: "register",
-                    firstName: firstName,
-                    lastName: lastName,
-                    age: document.getElementById('reg-age').value,
-                    wilaya: document.getElementById('reg-wilaya').value,
-                    commune: document.getElementById('reg-commune').value,
-                    role: role,
-                    email: document.getElementById('reg-email').value
-                })
-            });
-
-            alert(`تم تسجيل الحساب بنجاح كـ (${role}).`);
-        }
-
-        function startChat(contactName) {
-            activeChatContact = contactName;
-            switchTab('messages');
-            selectChatContact(contactName);
-        }
-
-        function selectChatContact(contactName) {
-            activeChatContact = contactName;
-            document.getElementById('active-chat-title').innerText = contactName;
-            const container = document.getElementById('chat-messages-container');
-            container.innerHTML = `
-                <div class="text-center">
-                    <span class="text-[10px] bg-slate-100 text-slate-500 px-3 py-1 rounded-full">بدأت المحادثة المباشرة مع ${contactName}</span>
-                </div>
-            `;
-        }
-
-        function sendChatMessage() {
-            const input = document.getElementById('chat-input-text');
-            const msg = input.value.trim();
-            if(!msg) return;
-
-            const container = document.getElementById('chat-messages-container');
-            const msgBubble = document.createElement('div');
-            msgBubble.className = "flex justify-start";
-            msgBubble.innerHTML = `
-                <div class="bg-primary text-white p-3 rounded-2xl rounded-tr-none text-xs max-w-md shadow-sm">
-                    <p>${msg}</p>
-                    <span class="text-[9px] text-emerald-200 mt-1 block font-mono">الآن</span>
-                </div>
-            `;
-            container.appendChild(msgBubble);
-
-            // إرسال الرسالة إلى Google Sheets
-            fetch(GOOGLE_SCRIPT_URL, {
-                method: "POST",
-                mode: "no-cors",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    action: "send_message",
-                    sender: currentUser.name,
-                    recipient: activeChatContact,
-                    message: msg
-                })
-            });
-
-            input.value = "";
-            container.scrollTop = container.scrollHeight;
-        }
-
-        function participateActivity(title, wilaya) {
-            const email = prompt("يرجى إدخال بريدك الإلكتروني لتأكيد التسجيل بالمبادرة:");
-            if(!email) return;
-
-            fetch(GOOGLE_SCRIPT_URL, {
-                method: "POST",
-                mode: "no-cors",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    action: "participate",
-                    initiativeTitle: title,
-                    wilaya: wilaya,
-                    userEmail: email
-                })
-            });
-
-            alert(`تم تسجيل طلب مشاركتك بنجاح في "${title}"!`);
         }
     </script>
 </body>
